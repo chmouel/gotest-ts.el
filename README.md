@@ -8,12 +8,18 @@ A Emacs major mode for running Go tests with Treesitter support.
 * [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Authors](#authors)
 
 ## Introduction
 
 This Emacs major mode provides a convenient way to run your Go tests using the
 `gotest` library with Treesitter support. It automatically detects test
 functions and subtests in your test files.
+
+
+https://github.com/user-attachments/assets/d61732b0-68a6-4947-b79f-d87adc3a412a
+
+
 
 ## Features
 
