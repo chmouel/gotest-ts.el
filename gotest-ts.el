@@ -1,9 +1,9 @@
-;;; gotest-ts.el --- gotest with treesitter -*- lexical-binding: t -*-
+;;; gotest-ts.el --- Gotest with treesitter -*- lexical-binding: t -*-
 
 ;; Author: Chmouel Boudjnah
 ;; Maintainer: Chmouel Boudjnah
 ;; Version: 0.2
-;; Package-Requires: ((emacs "29.0") (gotest "20230221.945"))
+;; Package-Requires: ((emacs "29.1") (gotest "20230221.945"))
 ;; Homepage: https://github.com/chmouel/gitest-ts.el
 ;; Keywords: languages, go, tests
 
