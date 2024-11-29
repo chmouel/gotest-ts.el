@@ -82,6 +82,10 @@ Bind it to a key and it will run the current test or subtest with DAPE.
 See the [DAPE](https://github.com/svaante/dape) package documentation for more
 information about dape.
 
+## Thanks
+
+This package is only a thin wrapper adding function to the excelent [gotest](https://github.com/nlamirault/gotest.el) package.
+
 ## Copyright
 
 [Apache-2.0](./LICENSE)
