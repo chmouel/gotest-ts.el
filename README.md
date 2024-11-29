@@ -33,11 +33,13 @@ You need to have your go mode configured to use treesitter see this
 [Article](https://robbmann.io/posts/emacs-treesit-auto/) for example for more
 information on how to this.
 
-You can install this using emacs30 `use-package` vc feature.
+You can install this using `use-package`
 
 ```emacs
 (use-package gotest-ts
-  :vc (:url "https://github.com/Emacs/gotest-ts.el")
+  :preface
+  (unless (package-installed-p 'gotest-ts)
+    (package-vc-install "https://github.com/chmouel/gotest-ts.el"))
   :bind
   ("<F2>" . gotest-ts-run-dwim))
 ```
