@@ -44,9 +44,43 @@ or by manually cloning the repository and add it to your load-path.
 
 ## Usage
 
-bind a key to the `gotest-ts-run-dwim` position yourself in a subtest or a test
-function and it will use [gotest](https://github.com/nlamirault/gotest.el) to
-run the current function or subtest using treesitter.
+bind a key to the `gotest-ts-run-dwim` (`F2` if you have copied the
+configuration above verbatim) position yourself in a subtest or a test
+function and it will discover via treesitter and run the current function or
+subtest with the [gotest](https://github.com/nlamirault/gotest.el) mode.
+
+## Debugging the current test or subtest with [Dape](https://github.com/svaante/dape)
+
+If you use Dape to debug your tests you can use this function:
+
+```emacs
+  (defun my-dape-go-test-at-point ()
+    (interactive)
+    (dape (dape--config-eval-1
+           `(modes (go-ts-mode)
+                   ensure dape-ensure-command
+                   fn dape-config-autoport
+                   command "dlv"
+                   command-args ("dap" "--listen" "127.0.0.1::autoport")
+                   command-cwd dape-cwd-fn
+                   port :autoport
+                   :type "debug"
+                   :request "launch"
+                   :mode "test"
+                   :cwd dape-cwd-fn
+                   :program (lambda () (concat "./" (file-relative-name default-directory (funcall dape-cwd-fn))))
+                   :args (lambda ()
+                           (when-let* ((test-name (gotest-ts-get-subtest-ts)))
+                             (if test-name `["-test.run" ,test-name]
+                               (error "No test selected")))))))))
+```
+
+Bind it to a key and it will run the current test or subtest with DAPE.
+
+(do not forget to put a breakpoint somewhere in your code or you won't see much)
+
+See the [DAPE](https://github.com/svaante/dape) package documentation for more
+information about dape.
 
 ## Copyright
 
