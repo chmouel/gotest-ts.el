@@ -63,7 +63,7 @@ Default is 'name'."
                  (replace-regexp-in-string " " "_" (match-string-no-properties 1 (treesit-node-text child))))))))
     (concat (format "^%s%s$" funcname (if subtest (concat "/" subtest) "")))))
 
-(defun gotest-ts-maybe-run()
+(defun gotest-ts-run-dwim()
   "Run the test function at point or the subtest at point if it is a subtest."
   (interactive)
   (when (string-match "_test\\.go" (buffer-file-name))
