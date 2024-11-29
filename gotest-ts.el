@@ -2,7 +2,7 @@
 
 ;; Author: Chmouel Boudjnah
 ;; Maintainer: Chmouel Boudjnah
-;; Version: 0.1
+;; Version: 0.2
 ;; Package-Requires: ((emacs "29.0") (gotest "20230221.945"))
 ;; Homepage: https://github.com/chmouel/gitest-ts.el
 ;; Keywords: languages, go, tests
@@ -57,7 +57,7 @@ Default is 'name'."
     (when struct-node
       (dolist (child children)
         (when (and (string-equal (treesit-node-type child) "keyed_element")
-                   (string-match (concat "^" my-gotest-get-subtest-key ":\\s-*\"\\(.*\\)\"$") (treesit-node-text child)))
+                   (string-match (concat "^" gotest-ts-get-subtest-key  ":\\s-*\"\\(.*\\)\"$") (treesit-node-text child)))
           (setq subtest
                 (shell-quote-argument
                  (replace-regexp-in-string " " "_" (match-string-no-properties 1 (treesit-node-text child))))))))
@@ -67,7 +67,7 @@ Default is 'name'."
   "Run the test function at point or the subtest at point if it is a subtest."
   (interactive)
   (when (string-match "_test\\.go" (buffer-file-name))
-    (let ((gotest (my-gotest-get-subtest-ts)))
+    (let ((gotest (gotest-ts-get-subtest-ts )))
       (go-test--go-test (concat "-run " gotest " .")))))
 
 (provide 'gotest-ts)
