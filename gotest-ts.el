@@ -46,6 +46,7 @@ Default is 'name'."
 
 
 (defun gotest-ts-get-subtest-ts ()
+  "Get the test function or subtest at point."
   (let* ((struct-node (treesit-parent-until
                        (treesit-node-at (point))
                        (lambda (n)
