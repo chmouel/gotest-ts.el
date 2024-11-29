@@ -35,6 +35,9 @@
 ;;; Code:
 
 ;;; gotest-ts.el ends here
+(require 'gotest)
+(require 'treesit)
+
 (defcustom gotest-ts-get-subtest-key "name"
   "The key used to identify a subtest in a struct.
 Default is 'name'."
