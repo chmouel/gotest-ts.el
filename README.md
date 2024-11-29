@@ -33,10 +33,9 @@ information on how to this.
 You can install this using `use-package`
 
 ```emacs
+(unless (package-installed-p 'gotest-ts)
+  (package-vc-install "https://github.com/chmouel/gotest-ts.el"))
 (use-package gotest-ts
-  :preface
-  (unless (package-installed-p 'gotest-ts)
-    (package-vc-install "https://github.com/chmouel/gotest-ts.el"))
   :bind
   ("<F2>" . gotest-ts-run-dwim))
 ```
