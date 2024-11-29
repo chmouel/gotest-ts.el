@@ -16,16 +16,13 @@ This Emacs major mode provides a convenient way to run your Go tests using the
 `gotest` library with Treesitter support. It automatically detects test
 functions and subtests in your test files.
 
-
-https://github.com/user-attachments/assets/d61732b0-68a6-4947-b79f-d87adc3a412a
-
-
+<https://github.com/user-attachments/assets/d61732b0-68a6-4947-b79f-d87adc3a412a>
 
 ## Features
 
-*   Run test functions and subtests in .go files with Treesitter support.
-*   Automatic detection of test functions and subtests.
-*   Simple and intuitive interface for running tests.
+* Run test functions and subtests in .go files with Treesitter support.
+* Automatic detection of test functions and subtests.
+* Simple and intuitive interface for running tests.
 
 ## Installation
 
@@ -57,8 +54,9 @@ run the current function or subtest using treesitter.
 [Apache-2.0](./LICENSE)
 
 ## Authors
+
 ### Chmouel Boudjnah
 
-- Fediverse - <[@chmouel@chmouel.com](https://fosstodon.org/@chmouel)>
-- Twitter - <[@chmouel](https://twitter.com/chmouel)>
-- Blog  - <[https://blog.chmouel.com](https://blog.chmouel.com)>
+* Fediverse - <[@chmouel@chmouel.com](https://fosstodon.org/@chmouel)>
+* Twitter - <[@chmouel](https://twitter.com/chmouel)>
+* Blog  - <[https://blog.chmouel.com](https://blog.chmouel.com)>

@@ -3,9 +3,9 @@
 ;; Author: Chmouel Boudjnah
 ;; Maintainer: Chmouel Boudjnah
 ;; Version: 0.1
-;; Package-Requires: (gotest treesit)
+;; Package-Requires: ((emacs "29.0") (gotest "20230221.945"))
 ;; Homepage: https://github.com/chmouel/gitest-ts.el
-;; Keywords: testing
+;; Keywords: languages, go, tests
 
 
 ;; This file is not part of GNU Emacs
