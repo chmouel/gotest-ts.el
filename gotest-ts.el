@@ -4,7 +4,7 @@
 ;; Maintainer: Chmouel Boudjnah
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "29.1") (gotest "20230221.945"))
-;; Homepage: https://github.com/chmouel/gitest-ts.el
+;; Homepage: https://github.com/chmouel/gotest-ts.el
 ;; Keywords: languages, go, tests
 
 
