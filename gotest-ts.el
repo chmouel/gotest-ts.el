@@ -40,10 +40,9 @@
 
 (defcustom gotest-ts-get-subtest-key "name"
   "The key used to identify a subtest in a struct.
-Default is 'name'."
+Default is \"name\"."
   :type 'string
   :group 'gotest-ts)
-
 
 (defun gotest-ts-get-subtest-ts ()
   "Get the test function or subtest at point."
