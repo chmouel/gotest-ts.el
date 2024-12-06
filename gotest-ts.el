@@ -3,7 +3,7 @@
 ;; Author: Chmouel Boudjnah
 ;; Maintainer: Chmouel Boudjnah
 ;; Version: 0.2
-;; Package-Requires: ((emacs "29.1") (gotest "20230221.945"))
+;; Package-Requires: ((emacs "29.1") (gotest "0.16.0"))
 ;; Homepage: https://github.com/chmouel/gotest-ts.el
 ;; Keywords: languages, go, tests
 
