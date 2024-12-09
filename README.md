@@ -96,7 +96,7 @@ This package is only a thin wrapper adding function to the excelent [gotest](htt
 
 ## Copyright
 
-[Apache-2.0](./LICENSE)
+[GPL-3.0-OR-LATER](./LICENSE)
 
 ## Authors
 
