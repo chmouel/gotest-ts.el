@@ -14,7 +14,8 @@ A Emacs major mode for running Go tests with Treesitter support.
 
 This Emacs major mode provides a convenient way to run your Go tests using the
 `gotest` library with Treesitter support. It automatically detects test
-functions and subtests in your test files.
+functions and subtests (using the conventional `name` key for subtest) in your
+test files.
 
 <https://github.com/user-attachments/assets/d61732b0-68a6-4947-b79f-d87adc3a412a>
 
@@ -30,11 +31,11 @@ You need to have your go mode configured to use treesitter see this
 [Article](https://robbmann.io/posts/emacs-treesit-auto/) for example for more
 information on how to this.
 
-You can install this using `use-package`
+You can install this using `use-package` and
+[Melpa](https://melpa.org/#/gotest-ts) by adding the following to your Emacs
+configuration:
 
 ```emacs
-(unless (package-installed-p 'gotest-ts)
-  (package-vc-install "https://github.com/chmouel/gotest-ts.el"))
 (use-package gotest-ts
   :bind
   ("<F2>" . gotest-ts-run-dwim))
@@ -81,6 +82,13 @@ Bind it to a key and it will run the current test or subtest with DAPE.
 
 See the [DAPE](https://github.com/svaante/dape) package documentation for more
 information about dape.
+
+## Bug
+
+When you have different structure inside a subtest that has a Name: it would
+pick up the wrong one. You just need to place yourself in the right struct where
+the name is.
+
 
 ## Thanks
 
