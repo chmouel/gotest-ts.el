@@ -39,7 +39,6 @@
 ;;
 ;;; Code:
 
-;;; gotest-ts.el ends here
 (require 'gotest)
 (require 'treesit)
 
@@ -79,3 +78,5 @@ Default is \"name\"."
       (go-test--go-test (concat "-run " gotest " .")))))
 
 (provide 'gotest-ts)
+
+;;; gotest-ts.el ends here
